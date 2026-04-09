@@ -36,7 +36,7 @@
 
         /* CONTENT */
         .content {
-            margin-left: 250px;
+            margin left: 250px;
             padding: 20px;
         }
 
