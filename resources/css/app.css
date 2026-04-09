@@ -1,12 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* NAVBAR */
+.navbar-custom {
+    background: white;
+    padding: 15px 60px;
+    height: 90px;
+}
+
+/* HERO */
+.hero-section {
+    background: #E6D8B5;
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* BIAR TIDAK OVERFLOW */
+.container, .row {
+    height: 100%;
+}
+
+/* GAMBAR */
 .logo-wrapper {
-    text-align: right;     /* geser ke kanan */
+    display: flex;
+    justify-content: flex-end;
 }
 
 .school-logo {
-    max-width: 450px;
-    margin-right: -40px;   /* menjorok keluar sedikit */
+    max-width: 100%;
+    height: auto;
 }
 
+/* CARD */
 .card {
     border-radius: 10px;
 }
@@ -14,4 +44,7 @@
 .list-group-item.active {
     background-color: #0d6efd;
     border: none;
+}
+body {
+    overflow-y: hidden !important;
 }

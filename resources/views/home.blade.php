@@ -19,7 +19,7 @@
 
         .hero-section{
             background:#E6D8B5;
-            padding:80px 0;
+            padding:60px 0;
         }
 
         .btn-outline-custom{
@@ -55,8 +55,8 @@
 
 <!-- HERO -->
 <section class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
 
             <!-- TEXT -->
             <div class="col-md-6">
@@ -77,11 +77,10 @@
             </div>
 
             <!-- IMAGE -->
-            <div class="mt-6">
-                <img src="{{ asset('images/school.png') }}" class="rounded float-end"
-                    alt="Sekolah"
-                    width="400"
-                    height="400">
+            <div class="col-md-6 text-end">
+                <img src="{{ asset('images/school.png') }}"
+                    class="img-fluid"
+                    style="max-height:400px;">
             </div>
 
         </div>

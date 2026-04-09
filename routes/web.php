@@ -6,10 +6,6 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', function () {
     return view('home');
 });
-
-Route::get('/home', function () {
-    return view('home');
-});
 Route::get('/daftar', function () {
     return view('daftar');
 });
