@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 });
 Route::get('/daftar', function () {

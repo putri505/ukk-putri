@@ -112,13 +112,11 @@
         <form>
             <!-- Username -->
             <div class="input-group">
-                <span class="input-group-text">👤</span>
                 <input type="Nis" class="form-control" placeholder="Nis">
             </div>
 
             <!-- Password -->
             <div class="input-group">
-                <span class="input-group-text">🔒</span>
                 <input type="password" class="form-control" placeholder="Password">
             </div>
 
@@ -126,14 +124,6 @@
 
             <button class="btn btn-daftar mt-2">Masuk</button>
         </form>
-        <form action="/login" method="POST">
-    @csrf
-
-    <input type="email" name="email" placeholder="Email" class="form-control mb-2">
-    <input type="password" name="password" placeholder="Password" class="form-control mb-2">
-
-    <button class="btn btn-success">Login</button>
-</form>
     </div>
 
 </body>
