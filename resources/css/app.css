@@ -1,0 +1,17 @@
+.logo-wrapper {
+    text-align: right;     /* geser ke kanan */
+}
+
+.school-logo {
+    max-width: 450px;
+    margin-right: -40px;   /* menjorok keluar sedikit */
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.list-group-item.active {
+    background-color: #0d6efd;
+    border: none;
+}
