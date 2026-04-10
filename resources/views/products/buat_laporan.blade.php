@@ -102,7 +102,7 @@
     </div>
 
     <!-- FORM -->
-    <form action="#" method="POST">
+    <form action="{{ route('product.buat_laporan') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="card-daftar shadow">
             <h3>Buat Laporan</h3>
@@ -111,20 +111,20 @@
             <form>
                 <!-- Username -->
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Judul Laporan">
+                    <input type="text" class="form-control @error('Judul Laporan') is-invalid @enderror" name="Judul Laporan" value="{{ old('title') }}" placeholder="Masukkan Laporan" placeholder="Judul Laporan">
                 </div>
 
                 <!-- Password -->
                 <div class="input-group">
-                    <input type="lokasi" class="form-control" placeholder="lokasi">
+                    <input type="lokasi" class="form-control form-control @error('Lokasi') is-invalid @enderror" name="Lokasi" value="{{ old('title') }}" placeholder="Masukkan Lokasi" placeholder="lokasi">
                 </div>
 
                 <!-- Tanggal -->
             <div class="input-group">
-                <input type="date" name="tanggal" class="form-control">
+                <input type="date" name="tanggal" class="form-control form-control @error('Tanggal') is-invalid @enderror" name="Tanggal" value="{{ old('title') }}" placeholder="Masukkan Lokasi" placeholder="lokasi">
             </div>
             
-                <button class="btn btn-daftar mt-2">Kirim</button>
+                <button type="submit" class="btn btn-daftar mt-2">Kirim</button>
             </form>
         </div>
 

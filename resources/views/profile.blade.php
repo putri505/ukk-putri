@@ -9,7 +9,14 @@
 
     <style>
         body {
-            background-color: #f5e6c8;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            border-bottom: 1px solid #ddd;
         }
 
         /* SIDEBAR */
@@ -35,15 +42,38 @@
         }
 
         /* CONTENT */
-        .content {
+        .main-content {
             margin-left: 250px;
             padding: 20px;
         }
 
-        .card-box {
-            background: #fff;
+        /* DASHBOARD */
+        .dashboard-box {
+            background: #e6d3a3;
+            padding: 10px;
             border-radius: 10px;
-            padding: 20px;
+        }
+
+        .card-box {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .status-selesai {
+            background: #4CAF50;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .status-proses {
+            background: #3678f4;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -72,16 +102,17 @@
     </div>
 
     <!-- 🔹 Content -->
-    <div class="content">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="content">
 
         <div class="card-box">
             <h3 class="text-center mb-3">Kelola Akun</h3>
 
             <!-- Foto -->
-            <div class="text-center mb-3">
-                <img src="{{ Auth::check() && Auth::user()->foto ? asset('storage/' . Auth::user()->foto) : 'https://via.placeholder.com/100' }}"
-                    class="rounded-circle mb-2" width="100">
-
+            <div class="text-center rounded mx-auto d-block mb-3">
+                <img src="..." class="" alt="...">
                 <form action="{{ route('update.foto') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="file" name="foto" class="form-control mb-2">
@@ -128,6 +159,9 @@
 
         </div>
 
+    </div>
+            </div>
+        </div>
     </div>
 
 </body>

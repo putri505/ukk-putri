@@ -106,23 +106,21 @@
         <h3>DAFTAR</h3>
         <div class="line"></div>
 
-        <form>
-            <!-- Nis -->
+        <form action="{{ route('daftar') }}" method="POST">
+            @csrf
             <div class="input-group">
-                <input type="nis" class="form-control" placeholder="Nis">
+                <input type="text"  name="username" class="form-control" placeholder="Username" required>
             </div>
 
-            <!-- Password -->
             <div class="input-group">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
 
-            <!-- Email -->
             <div class="input-group">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
             </div>
 
-            <button class="btn btn-daftar mt-2">Daftar</button>
+            <button type="submit" class="btn btn-daftar mt-2">Daftar</button>
         </form>
     </div>
 
